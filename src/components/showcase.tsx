@@ -79,8 +79,7 @@ export default function ProjectShowcase() {
             <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 <For each={projects}>
                     {(project) => (
-                        // TODO Hover effect
-                        <div class="card  bg-secondary text-secondary-content shadow-xl hover:shadow-2xl transition">
+                        <div class="card  bg-secondary text-secondary-content hover:bg-primary hover:text-primary-content transition-all duration-200 shadow-md">
                             <div class="card-body">
                                 <h2 class="card-title text-2xl font-extrabold">{project.name}</h2>
                                 <p class="mb-3 grow-0">
@@ -108,7 +107,7 @@ export default function ProjectShowcase() {
                                     ) : (
                                         <></>
                                     )}
-                                    <a href={project.link} target="_blank" class="btn btn-primary">
+                                    <a href={project.link} target="_blank" class="btn btn-success">
                                         {t().showcase.view}
                                     </a>
                                 </div>
