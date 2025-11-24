@@ -7,7 +7,7 @@ export function Footer() {
     return (
         <footer class="footer sm:footer-horizontal footer-center bg- text-base-content p-8">
             <aside>
-                <p>Copyright © {getCopyrightYear(2025)} <br/>Rafał Milichiewicz</p>
+                <p>Copyright © {getCopyrightYear(2025)}<br/>Rafał Milichiewicz</p>
             </aside>
         </footer>
     );
