@@ -48,6 +48,7 @@ export function Navbar() {
                 <a
                     class="btn btn-ghost w-10 h-10"
                     href="https://github.com/rafalmilichiewicz"
+                    aria-label="GitHub"
                     target="_blank"
                 >
                     <SiGithub size={24} />
@@ -55,6 +56,7 @@ export function Navbar() {
                 <a
                     class="btn btn-ghost w-10 h-10"
                     href="https://www.linkedin.com/in/rafał-milichiewicz-8750a9309"
+                    aria-label="LinkedIn"
                     target="_blank"
                 >
                     <SiLinkedin size={24} />
