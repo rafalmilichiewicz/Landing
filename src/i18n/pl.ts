@@ -1,3 +1,7 @@
-import type { EN } from './en';
+import type { I18nStructure } from './en';
 
-export const PL: typeof EN = {} as const;
+export const PL: I18nStructure = {
+    navbar: {
+        language: 'Język',
+    },
+} as const;
