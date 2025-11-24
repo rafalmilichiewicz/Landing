@@ -12,4 +12,7 @@ export const PL: I18nStructure = {
         special: 'Demo',
         view: 'Przejdź do projektu',
     },
+    skills: {
+        title: "Umiejętności i technologie"
+    }
 } as const;

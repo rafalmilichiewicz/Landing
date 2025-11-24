@@ -1,5 +1,6 @@
 import { SiGithub, SiLinkedin } from 'solid-icons/si';
 import { useLanguage } from '../context/language';
+import { RiDevelopmentCodeSSlashLine } from 'solid-icons/ri';
 
 export function Navbar() {
     const { setLanguage, t } = useLanguage();
@@ -45,6 +46,14 @@ export function Navbar() {
                         </li>
                     </ul>
                 </div>
+                <a
+                    class="btn btn-ghost w-10 h-10"
+                    href="https://github.com/rafalmilichiewicz/Landing"
+                    aria-label="LinkedIn"
+                    target="_blank"
+                >
+                    <RiDevelopmentCodeSSlashLine size={24} />
+                </a>
                 <a
                     class="btn btn-ghost w-10 h-10"
                     href="https://github.com/rafalmilichiewicz"

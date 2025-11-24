@@ -10,6 +10,9 @@ export const EN = {
         special: 'Demo',
         view: 'View Project',
     },
+    skills: {
+        title: 'Skill Showcase',
+    },
 } as const;
 
 export type I18nStructure = {

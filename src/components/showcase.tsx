@@ -38,10 +38,9 @@ const projects: Project[] = [
         name: '🚢 RuleTheWaves',
         description: {
             en: 'An iOS game written in SwiftUI — a new take on classic Warships.',
-            pl: 'Gra mobilna iOS w statki napisana w SwiftUI.',
+            pl: 'Gra mobilna w statki na platformę iOS, napisana w SwiftUI.',
         },
         tags: ['Swift', 'SwiftUI', 'MVVM', 'Mobile App', 'Algorithms', 'Data structures'],
-        // TODO Link to game movie
         link: 'https://github.com/rafalmilichiewicz/RuleTheWaves',
         special: 'https://files.catbox.moe/uqvr3e.MP4',
     },
@@ -75,7 +74,7 @@ export default function ProjectShowcase() {
     const { language, t } = useLanguage();
     return (
         <div class="p-6">
-            <h1 class="text-3xl mb-6 text-center">🗂️ {t().showcase.title}</h1>
+            <h1 class="text-3xl mb-6 text-center text-primary">🗂️ {t().showcase.title}</h1>
             <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 <For each={projects}>
                     {(project) => (
@@ -100,14 +99,14 @@ export default function ProjectShowcase() {
                                         <a
                                             href={project.special}
                                             target="_blank"
-                                            class="btn btn-info"
+                                            class="btn btn-warning"
                                         >
                                             {t().showcase.special}
                                         </a>
                                     ) : (
                                         <></>
                                     )}
-                                    <a href={project.link} target="_blank" class="btn btn-success">
+                                    <a href={project.link} target="_blank" class="btn btn-info">
                                         {t().showcase.view}
                                     </a>
                                 </div>

@@ -2,6 +2,7 @@ import { Footer } from './components/footer';
 import { Hero } from './components/hero';
 import { Navbar } from './components/navbar';
 import ProjectShowcase from './components/showcase';
+import SkillsShowcase from './components/skills';
 import { LanguageProvider } from './context/language';
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
             <div class="grow content-center">
                 <Hero></Hero>
                 <ProjectShowcase></ProjectShowcase>
-                {/* <h1 class="">Hello World!</h1> */}
+                <SkillsShowcase></SkillsShowcase>
             </div>
             <Footer />
         </LanguageProvider>
