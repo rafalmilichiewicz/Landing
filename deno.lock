@@ -6,6 +6,7 @@
     "npm:daisyui@^5.5.5": "5.5.5",
     "npm:solid-icons@^1.1.0": "1.1.0_solid-js@1.9.10__seroval@1.3.2",
     "npm:solid-js@^1.9.10": "1.9.10_seroval@1.3.2",
+    "npm:solid-motionone@^1.0.4": "1.0.4_solid-js@1.9.10__seroval@1.3.2",
     "npm:tailwindcss@^4.1.17": "4.1.17",
     "npm:typescript@~5.9.3": "5.9.3",
     "npm:vite-plugin-solid@^2.11.10": "2.11.10_solid-js@1.9.10__seroval@1.3.2_vite@7.2.4__@types+node@24.10.1__picomatch@4.0.3_@babel+core@7.28.5_@types+node@24.10.1",
@@ -305,6 +306,52 @@
         "@jridgewell/sourcemap-codec"
       ]
     },
+    "@motionone/animation@10.18.0": {
+      "integrity": "sha512-9z2p5GFGCm0gBsZbi8rVMOAJCtw1WqBTIPw3ozk06gDvZInBPIsQcHgYogEJ4yuHJ+akuW8g1SEIOpTOvYs8hw==",
+      "dependencies": [
+        "@motionone/easing",
+        "@motionone/types",
+        "@motionone/utils",
+        "tslib"
+      ]
+    },
+    "@motionone/dom@10.18.0": {
+      "integrity": "sha512-bKLP7E0eyO4B2UaHBBN55tnppwRnaE3KFfh3Ps9HhnAkar3Cb69kUCJY9as8LrccVYKgHA+JY5dOQqJLOPhF5A==",
+      "dependencies": [
+        "@motionone/animation",
+        "@motionone/generators",
+        "@motionone/types",
+        "@motionone/utils",
+        "hey-listen",
+        "tslib"
+      ]
+    },
+    "@motionone/easing@10.18.0": {
+      "integrity": "sha512-VcjByo7XpdLS4o9T8t99JtgxkdMcNWD3yHU/n6CLEz3bkmKDRZyYQ/wmSf6daum8ZXqfUAgFeCZSpJZIMxaCzg==",
+      "dependencies": [
+        "@motionone/utils",
+        "tslib"
+      ]
+    },
+    "@motionone/generators@10.18.0": {
+      "integrity": "sha512-+qfkC2DtkDj4tHPu+AFKVfR/C30O1vYdvsGYaR13W/1cczPrrcjdvYCj0VLFuRMN+lP1xvpNZHCRNM4fBzn1jg==",
+      "dependencies": [
+        "@motionone/types",
+        "@motionone/utils",
+        "tslib"
+      ]
+    },
+    "@motionone/types@10.17.1": {
+      "integrity": "sha512-KaC4kgiODDz8hswCrS0btrVrzyU2CSQKO7Ps90ibBVSQmjkrt2teqta6/sOG59v7+dPnKMAg13jyqtMKV2yJ7A=="
+    },
+    "@motionone/utils@10.18.0": {
+      "integrity": "sha512-3XVF7sgyTSI2KWvTf6uLlBJ5iAgRgmvp3bpuOiQJvInd4nZ19ET8lX5unn30SlmRH7hXbBbH+Gxd0m0klJ3Xtw==",
+      "dependencies": [
+        "@motionone/types",
+        "hey-listen",
+        "tslib"
+      ]
+    },
     "@rollup/rollup-android-arm-eabi@4.53.3": {
       "integrity": "sha512-mRSi+4cBjrRLoaal2PnqH82Wqyb+d3HsPUN/W+WslCXsZsyHa9ZeQQX/pQsZaVIWDkPcpV6jJ+3KLbTbgnwv8w==",
       "os": ["android"],
@@ -414,6 +461,32 @@
       "integrity": "sha512-UhTd8u31dXadv0MopwGgNOBpUVROFKWVQgAg5N1ESyCz8AuBcMqm4AuTjrwgQKGDfoFuz02EuMRHQIw/frmYKQ==",
       "os": ["win32"],
       "cpu": ["x64"]
+    },
+    "@solid-primitives/props@3.2.2_solid-js@1.9.10__seroval@1.3.2": {
+      "integrity": "sha512-lZOTwFJajBrshSyg14nBMEP0h8MXzPowGO0s3OeiR3z6nXHTfj0FhzDtJMv+VYoRJKQHG2QRnJTgCzK6erARAw==",
+      "dependencies": [
+        "@solid-primitives/utils",
+        "solid-js"
+      ]
+    },
+    "@solid-primitives/refs@1.1.2_solid-js@1.9.10__seroval@1.3.2": {
+      "integrity": "sha512-K7tf2thy7L+YJjdqXspXOg5xvNEOH8tgEWsp0+1mQk3obHBRD6hEjYZk7p7FlJphSZImS35je3UfmWuD7MhDfg==",
+      "dependencies": [
+        "@solid-primitives/utils",
+        "solid-js"
+      ]
+    },
+    "@solid-primitives/transition-group@1.1.2_solid-js@1.9.10__seroval@1.3.2": {
+      "integrity": "sha512-gnHS0OmcdjeoHN9n7Khu8KNrOlRc8a2weETDt2YT6o1zeW/XtUC6Db3Q9pkMU/9cCKdEmN4b0a/41MKAHRhzWA==",
+      "dependencies": [
+        "solid-js"
+      ]
+    },
+    "@solid-primitives/utils@6.3.2_solid-js@1.9.10__seroval@1.3.2": {
+      "integrity": "sha512-hZ/M/qr25QOCcwDPOHtGjxTD8w2mNyVAYvcfgwzBHq2RwNqHNdDNsMZYap20+ruRwW4A3Cdkczyoz0TSxLCAPQ==",
+      "dependencies": [
+        "solid-js"
+      ]
     },
     "@tailwindcss/node@4.1.17": {
       "integrity": "sha512-csIkHIgLb3JisEFQ0vxr2Y57GUNYh447C8xzwj89U/8fdW8LhProdxvnVH6U8M2Y73QKiTIH+LWbK3V2BBZsAg==",
@@ -677,6 +750,9 @@
     "graceful-fs@4.2.11": {
       "integrity": "sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ=="
     },
+    "hey-listen@1.0.8": {
+      "integrity": "sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q=="
+    },
     "html-entities@2.3.3": {
       "integrity": "sha512-DV5Ln36z34NNTDgnz0EWGBLZENelNAtkiFA4kyNOG2tDI6Mz1uSWiq1wAKdyjnJwyDiDO7Fa2SO1CTxPXL8VxA=="
     },
@@ -879,6 +955,18 @@
         "seroval-plugins"
       ]
     },
+    "solid-motionone@1.0.4_solid-js@1.9.10__seroval@1.3.2": {
+      "integrity": "sha512-aqEjgecoO9raDFznu/dEci7ORSmA26Kjj9J4Cn1Gyr0GZuOVdvsNxdxClTL9J40Aq/uYFx4GLwC8n70fMLHiuA==",
+      "dependencies": [
+        "@motionone/dom",
+        "@motionone/utils",
+        "@solid-primitives/props",
+        "@solid-primitives/refs",
+        "@solid-primitives/transition-group",
+        "csstype",
+        "solid-js"
+      ]
+    },
     "solid-refresh@0.6.3_solid-js@1.9.10__seroval@1.3.2": {
       "integrity": "sha512-F3aPsX6hVw9ttm5LYlth8Q15x6MlI/J3Dn+o3EQyRTtTxidepSTwAYdozt01/YA+7ObcciagGEyXIopGZzQtbA==",
       "dependencies": [
@@ -903,6 +991,9 @@
         "fdir",
         "picomatch"
       ]
+    },
+    "tslib@2.8.1": {
+      "integrity": "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="
     },
     "typescript@5.9.3": {
       "integrity": "sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==",
@@ -973,6 +1064,7 @@
         "npm:daisyui@^5.5.5",
         "npm:solid-icons@^1.1.0",
         "npm:solid-js@^1.9.10",
+        "npm:solid-motionone@^1.0.4",
         "npm:tailwindcss@^4.1.17",
         "npm:typescript@~5.9.3",
         "npm:vite-plugin-solid@^2.11.10",

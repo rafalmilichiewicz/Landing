@@ -13,6 +13,9 @@ export const PL: I18nStructure = {
         view: 'Przejdź do projektu',
     },
     skills: {
-        title: "Umiejętności i technologie"
-    }
+        title: 'Umiejętności i technologie',
+    },
+    tech: {
+        title: 'Ciekawe niszowe rozwiązania',
+    },
 } as const;

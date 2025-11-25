@@ -1,3 +1,4 @@
+import { CoolTech } from './components/cool-tech';
 import { Footer } from './components/footer';
 import { Hero } from './components/hero';
 import { Navbar } from './components/navbar';
@@ -13,6 +14,7 @@ function App() {
                 <Hero></Hero>
                 <ProjectShowcase></ProjectShowcase>
                 <SkillsShowcase></SkillsShowcase>
+                <CoolTech></CoolTech>
             </div>
             <Footer />
         </LanguageProvider>

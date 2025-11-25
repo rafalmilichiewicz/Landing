@@ -13,6 +13,9 @@ export const EN = {
     skills: {
         title: 'Skill Showcase',
     },
+    tech: {
+        title: 'Cool Niche Tech',
+    },
 } as const;
 
 export type I18nStructure = {

@@ -30,6 +30,7 @@ import { BiSolidSpreadsheet, BiSolidFileJson } from 'solid-icons/bi';
 import type { IconTypes } from 'solid-icons';
 import { FaSolidBroom } from 'solid-icons/fa';
 import { RiDevelopmentCodeSSlashLine } from 'solid-icons/ri';
+import { Motion } from 'solid-motionone';
 
 export default function SkillsShowcase() {
     type Category = {
@@ -155,18 +156,24 @@ export default function SkillsShowcase() {
             <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 w-full max-w-4xl ">
                 <For each={currentCategory().techs.names}>
                     {(tech, index) => (
-                        <div class="card bg-secondary text-secondary-content hover:bg-primary hover:text-primary-content transition-all duration-200 shadow-md">
-                            <div class="card-body p-4 items-center flex-row justify-center">
-                                {currentCategory().techs.icons[index()] ? (
-                                    currentCategory().techs.icons[index()]({ size: 24 })
-                                ) : (
-                                    <></>
-                                )}
-                                <span class="font-medium text-sm sm:text-base items-center">
-                                    {tech}
-                                </span>
+                        <Motion.div
+                            initial={{ opacity: 0, y: 15 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            <div class="card bg-secondary text-secondary-content hover:bg-primary hover:text-primary-content transition-all duration-200 shadow-md">
+                                <div class="card-body p-4 items-center flex-row justify-center">
+                                    {currentCategory().techs.icons[index()] ? (
+                                        currentCategory().techs.icons[index()]({ size: 24 })
+                                    ) : (
+                                        <></>
+                                    )}
+                                    <span class="font-medium text-sm sm:text-base items-center">
+                                        {tech}
+                                    </span>
+                                </div>
                             </div>
-                        </div>
+                        </Motion.div>
                     )}
                 </For>
             </div>
