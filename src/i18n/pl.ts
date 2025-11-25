@@ -15,6 +15,10 @@ export const PL: I18nStructure = {
     skills: {
         title: 'Umiejętności i technologie',
     },
+    journey: {
+        title: 'Moja przygoda z technologią',
+        
+    },
     tech: {
         title: 'Ciekawe niszowe rozwiązania',
     },

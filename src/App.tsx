@@ -1,6 +1,7 @@
 import { CoolTech } from './components/cool-tech';
 import { Footer } from './components/footer';
 import { Hero } from './components/hero';
+import { Journey } from './components/journet';
 import { Navbar } from './components/navbar';
 import ProjectShowcase from './components/showcase';
 import SkillsShowcase from './components/skills';
@@ -14,6 +15,7 @@ function App() {
                 <Hero></Hero>
                 <ProjectShowcase></ProjectShowcase>
                 <SkillsShowcase></SkillsShowcase>
+                <Journey></Journey>
                 <CoolTech></CoolTech>
             </div>
             <Footer />

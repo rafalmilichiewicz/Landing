@@ -13,6 +13,9 @@ export const EN = {
     skills: {
         title: 'Skill Showcase',
     },
+    journey: {
+        title: 'My Tech Journey',
+    },
     tech: {
         title: 'Cool Niche Tech',
     },
