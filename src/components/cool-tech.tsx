@@ -6,7 +6,7 @@ import { SiTauri } from 'solid-icons/si';
 import { FaSolidLock } from 'solid-icons/fa';
 import { RiDocumentFilePaper2Fill } from 'solid-icons/ri';
 
-interface Tech {
+type Tech = {
     name: string;
     icon: IconTypes;
     en: string;
@@ -17,13 +17,13 @@ const techs: Tech[] = [
     {
         name: 'Typst',
         icon: RiDocumentFilePaper2Fill,
-        en: 'Modern LaTeX that is enjoyable to write',
+        en: 'Modern LaTeX that is enjoyable to write.',
         pl: 'Nowoczesny LaTeX, w którym przyjemnie się pisze.',
     },
     {
         name: 'Caddy',
         icon: FaSolidLock,
-        en: 'HTTP server that just works',
+        en: 'HTTP server that just works.',
         pl: 'Serwer HTTP, który po prostu działa.',
     },
     {
