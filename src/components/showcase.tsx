@@ -66,7 +66,9 @@ const projects: Project[] = [
             'Reverse engineering',
             'Data exploration',
         ],
-        link: 'https://github.com/rafalmilichiewicz/Projekt-AI/blob/main/Projekt%20zaliczeniowy%20z%20przedmiotu%20Systemy%20Sztucznej%20Inteligencji%20Rafał%20Milichiewicz%2095541.pdf',
+        special:
+            'https://github.com/rafalmilichiewicz/Projekt-AI/blob/main/Projekt%20zaliczeniowy%20z%20przedmiotu%20Systemy%20Sztucznej%20Inteligencji%20Rafał%20Milichiewicz%2095541.pdf',
+        link: 'https://github.com/rafalmilichiewicz/Projekt-AI/tree/main',
     },
 ];
 
