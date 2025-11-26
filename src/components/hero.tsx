@@ -33,7 +33,7 @@ export function Hero() {
                             background-clip: text;
                         }
                     `}</style>
-                    <h1 class="text-5xl font-bold animated-gradient bg-primary-content">
+                    <h1 class="md:text-6xl text-4xl font-bold animated-gradient bg-primary-content">
                         Rafał Milichiewicz
                     </h1>
                     <h2 class="py-6">{t().hero.description}</h2>
