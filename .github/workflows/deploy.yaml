@@ -34,9 +34,7 @@ jobs:
       # Cloudflare Wrangler does not support Deno by default
       - name: Install Wrangler
         run: |
-          deno install \
-            --allow-env --allow-read --allow-net --allow-scripts --allow-run \
-            --global -n wrangler npm:wrangler
+          npm i -g wrangler@latest
 
       - name: Check Wrangler instal
         run: wrangler --version
