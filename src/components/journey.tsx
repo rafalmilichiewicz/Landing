@@ -52,7 +52,7 @@ const journeyElements: JourneyElement[] = [
             pl: (
                 <p>
                     Był to tylko konsolowy kalkulator średniej ocen w C++, ale działał i korzystali
-                    z niego inni
+                    z niego inni.
                 </p>
             ),
         },
@@ -148,13 +148,13 @@ const journeyElements: JourneyElement[] = [
         content: {
             en: (
                 <p>
-                    Using Raspberry Pi 5 I host: Gitea (Git), Immich (photo), Pydio (files), and
+                    Using Raspberry Pi 5 I host: Gitea (Git), Immich (photo), Filebrowser (files), and
                     Formbricks (feedback) via Cloudflare Tunnels/Tailscale.
                 </p>
             ),
             pl: (
                 <p>
-                    Przy użyciu Raspberry Pi 5 hostuję serwisy: Gitea (Git), Immich (zdjęcia), Pydio
+                    Przy użyciu Raspberry Pi 5 hostuję serwisy: Gitea (Git), Immich (zdjęcia), Filebrowser
                     (pliki), and Formbricks (feedback) przez Cloudflare Tunnels/Tailscale.
                 </p>
             ),

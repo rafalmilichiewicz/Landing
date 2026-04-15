@@ -1,7 +1,7 @@
 import { CoolTech } from './components/cool-tech';
 import { Footer } from './components/footer';
 import { Hero } from './components/hero';
-import { Journey } from './components/journet';
+import { Journey } from './components/journey';
 import { Navbar } from './components/navbar';
 import ProjectShowcase from './components/showcase';
 import SkillsShowcase from './components/skills';
