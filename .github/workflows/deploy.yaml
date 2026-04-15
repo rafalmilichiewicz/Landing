@@ -36,7 +36,7 @@ jobs:
         run: |
           deno install \
             --allow-env --allow-read --allow-net --allow-scripts --allow-run \
-            --global -n wrangler npm:wrangler@latest
+            --global -n wrangler npm:wrangler
 
       - name: Check Wrangler instal
         run: wrangler --version
