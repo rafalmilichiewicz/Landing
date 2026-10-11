@@ -4,25 +4,26 @@
 
 ![Favicon](public/favicon.svg)
 
-This is repository for landing page built with `Solid.js`, `Tailwind CSS`, and `Daisy UI`. It is powered by Deno, Vite, and deployed to Cloudflare Pages via GitHub CI/CD.
+This is repository for landing page built with `Solid.js`, `Tailwind CSS`, and `Daisy UI`. It is powered by `Bun` and `Astro`, and deployed to Cloudflare Pages via GitHub CI/CD.
 
 # Tech stack
 
--   `Deno` - for its seamless TS setup
--   `Solid.js` - a no-nonsense frontend framework
--   `Tailwind CSS` & `DaisyUI` - high quality styling and components
+- `Bun` - JS runtime and package manager
+- `Astro` -
+- `Solid.js` - a no-nonsense frontend framework
+- `Tailwind CSS` & `DaisyUI` - high quality styling and components
 
 # Prerequisites
 
--   Deno 2
+- Bun
 
 # Running
 
 ```sh
-deno install # Install dependencies
-deno task dev # Dev server available @ port 3000
-deno task build # Build action. Files in /dist
-deno task preview # Preview built project @ port 4000
+bun install # Install dependencies
+bun run dev # Dev server available @ port 4321
+bun run build # Build action. Files in /dist
+bun run preview # Preview built project @ port 4321
 ```
 
 # Preview and Deployment

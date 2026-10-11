@@ -18,29 +18,30 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Set up Deno
-        uses: denoland/setup-deno@v1
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          deno-version: v2.x
+          bun-version: 1.4.x
 
       - name: Install Dependencies
         run: |
-          deno install
+          bun install
 
       - name: Build
         run: |
-          deno task build
+          bun run build
 
-      # Cloudflare Wrangler does not support Deno by default
+      # Cloudflare Wrangler does not support Bun by default
       - name: Install Wrangler
         run: |
           npm i -g wrangler@latest
 
       - name: Check Wrangler instal
         run: wrangler --version
+
       - name: Deploy
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=landing-page
+          command: pages deploy ./dist --project-name=landing-page

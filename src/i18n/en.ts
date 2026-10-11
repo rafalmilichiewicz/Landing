@@ -1,26 +1,22 @@
 export const EN = {
     navbar: {
-        language: 'Language',
+        language: "Language",
     },
     hero: {
-        description: 'Data Oriented Programmer',
+        description: "Data Oriented Programmer",
     },
     showcase: {
-        title: 'Project Showcase',
-        special: 'Demo',
-        view: 'View Project',
+        title: "Project Showcase",
+        special: "Demo",
+        view: "View Project",
     },
     skills: {
-        title: 'Skill Showcase',
+        title: "Skill Showcase",
     },
     journey: {
-        title: 'My Tech Journey',
+        title: "My Tech Journey",
     },
     tech: {
-        title: 'Cool Niche Tech',
+        title: "Cool Niche Tech",
     },
 } as const;
-
-export type I18nStructure = {
-    [K in keyof typeof EN]: { [P in keyof (typeof EN)[K]]: string };
-};
