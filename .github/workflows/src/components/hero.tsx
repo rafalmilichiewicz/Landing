@@ -1,12 +1,12 @@
-import { useLanguage } from '../context/language';
+import { useLanguage } from "@/contexts/language";
 
 export function Hero() {
-    const { t } = useLanguage();
-    return (
-        <div class="hero my-16 ">
-            <div class="hero-content text-center">
-                <div class="max-w-lg">
-                    <style>{`
+  const { t } = useLanguage();
+  return (
+    <div class="hero my-16 ">
+      <div class="hero-content text-center">
+        <div class="max-w-lg">
+          <style>{`
                         @keyframes gradient-shift {
                             0%,
                             100% {
@@ -33,12 +33,12 @@ export function Hero() {
                             background-clip: text;
                         }
                     `}</style>
-                    <h1 class="md:text-6xl text-4xl font-bold animated-gradient bg-primary-content">
-                        Rafał Milichiewicz
-                    </h1>
-                    <h2 class="py-6">{t().hero.description}</h2>
-                </div>
-            </div>
+          <h1 class="md:text-6xl text-4xl font-bold animated-gradient bg-primary-content">
+            Rafał Milichiewicz
+          </h1>
+          <h2 class="py-6">{t().hero.description}</h2>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
