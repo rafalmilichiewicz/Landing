@@ -24,6 +24,7 @@ bun install # Install dependencies
 bun run dev # Dev server available @ port 4321
 bun run build # Build action. Files in /dist
 bun run preview # Preview built project @ port 4321
+bun run test # Run test suite
 ```
 
 # Preview and Deployment
