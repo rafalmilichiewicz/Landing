@@ -9,7 +9,7 @@ This is repository for landing page built with `Solid.js`, `Tailwind CSS`, and `
 # Tech stack
 
 - `Bun` - JS runtime and package manager
-- `Astro` -
+- `Astro` - Web framework
 - `Solid.js` - a no-nonsense frontend framework
 - `Tailwind CSS` & `DaisyUI` - high quality styling and components
 
