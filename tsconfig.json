@@ -10,6 +10,7 @@
   "compilerOptions": {
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
+    "types": ["bun"],
     "paths": {
       "@components/*": [
         "./src/components/*"
@@ -23,6 +24,6 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
   },
 }
