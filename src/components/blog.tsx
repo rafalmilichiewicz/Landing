@@ -22,7 +22,7 @@ export function Blog(props: { posts: Blog[] }) {
               <p class="text-xs text-justify">{post.data.pubDate.toLocaleDateString()}</p>
               <p class="text-base md:text-base text-justify">{post.data.description}</p>
               <div class="card-actions justify-around">
-                <a class="btn btn-info" href={`${post.collection}/${post.id}`}>
+                <a class="btn btn-info" href={`/${post.collection}/${post.id}`}>
                   {t(language()).blog.read}
                 </a>
               </div>

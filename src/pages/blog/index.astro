@@ -23,7 +23,7 @@ const posts = (await getCollection("blog")).sort(
               <p class="text-xs text-justify">{post.data.pubDate.toLocaleDateString()}</p>
               <p class="text-base text-justify">{post.data.description}</p>
               <div class="card-actions justify-around">
-                <a class="btn btn-info" href={`${post.collection}/${post.id}`}>
+                <a class="btn btn-info" href={`/${post.collection}/${post.id}`}>
                   {EN.blog.read}
                 </a>
               </div>
