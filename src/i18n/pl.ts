@@ -6,7 +6,7 @@ export const PL: I18nStructure = {
         emoji: "🇵🇱",
     },
     hero: {
-        description: "Programista zorientowany na dane",
+        description: "Software Developer",
     },
     blog: {
         visit: "Odwiedź",

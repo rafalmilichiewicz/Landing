@@ -4,7 +4,7 @@ export const EN = {
         emoji: "🇬🇧",
     },
     hero: {
-        description: "Data Oriented Programmer",
+        description: "Software Developer",
     },
     blog: {
         visit: "Visit",
