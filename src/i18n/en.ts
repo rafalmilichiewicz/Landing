@@ -1,6 +1,7 @@
 export const EN = {
     navbar: {
         language: "Language",
+        emoji: "🇬🇧",
     },
     hero: {
         description: "Data Oriented Programmer",
