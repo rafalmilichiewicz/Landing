@@ -25,7 +25,9 @@ import {
   SiGithubactions,
   SiExpo,
   SiJetpackcompose,
+  SiTerraform,
 } from "solid-icons/si";
+import { VsAzure } from "solid-icons/vs";
 import { BiSolidSpreadsheet, BiSolidFileJson } from "solid-icons/bi";
 import type { IconTypes } from "solid-icons";
 import { FaSolidBroom } from "solid-icons/fa";
@@ -100,8 +102,15 @@ export function SkillsShowcase() {
         pl: "Chmurowe",
       },
       techs: {
-        names: ["Docker & Compose", "Kubernetes (K8s)", "Self-hosting", "Linux: Debian / Fedora"],
-        icons: [SiDocker, SiKubernetes, SiCloudflare, SiLinux],
+        names: [
+          "Docker & Compose",
+          "Kubernetes (K8s)",
+          "Self-hosting",
+          "Linux: Debian / Fedora",
+          "Terraform",
+          "Azure",
+        ],
+        icons: [SiDocker, SiKubernetes, SiCloudflare, SiLinux, SiTerraform, VsAzure],
       },
     },
   } as const;
@@ -133,9 +142,9 @@ export function SkillsShowcase() {
         <For each={currentCategory().techs.names}>
           {(tech, index) => (
             <Motion.div
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: -15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.5, easing: "ease-in-out" }}
             >
               <div class="card bg-secondary text-secondary-content hover:bg-primary hover:text-primary-content transition-all duration-200 shadow-md">
                 <div class="card-body p-4 items-center flex-row justify-center">
