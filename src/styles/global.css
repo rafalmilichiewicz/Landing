@@ -13,4 +13,57 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --animated-gradient: linear-gradient(90deg, #1eb854, #10b981, #14b8a6, #06b6d4, #1eb854);
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-gradient {
+  background-image: var(--animated-gradient);
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+.animated-gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient-aura {
+  position: relative;
+  isolation: isolate;
+  border-radius: 0.75rem;
+}
+
+.gradient-aura::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  z-index: -1;
+  border-radius: inherit;
+
+  background-image: var(--animated-gradient);
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+
+  filter: blur(18px);
+  opacity: 0.65;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gradient-aura::before {
+    animation: none;
+  }
 }
