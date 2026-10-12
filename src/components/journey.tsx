@@ -1,5 +1,6 @@
+import { $language, t } from "@/stores/language";
+import { useStore } from "@nanostores/solid";
 import { FaSolidCircleDot } from "solid-icons/fa";
-import { useLanguage } from "@/contexts/language";
 import { For, type JSXElement } from "solid-js";
 
 type JourneyElement = {
@@ -197,10 +198,10 @@ const journeyElements: JourneyElement[] = [
 ];
 
 export function Journey() {
-  const { language, t } = useLanguage();
+  const language = useStore($language);
   return (
     <div class="p-6">
-      <h1 class="text-3xl mb-6 text-center text-primary">⛰️ {t().journey.title}</h1>
+      <h1 class="text-3xl mb-6 text-center text-primary">⛰️ {t(language()).journey.title}</h1>
       <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
         <For each={journeyElements}>
           {(element, index) => {

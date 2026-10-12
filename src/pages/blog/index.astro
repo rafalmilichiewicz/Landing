@@ -1,0 +1,47 @@
+---
+import Base from "@/layouts/base.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
+---
+
+<Base title="Blog" description="Main Blog site">
+  <main class="grow content-start">
+    <h1 class="text-3xl mb-6 text-center text-primary">🗂️ Blog</h1>
+    {
+      posts.map((post) => (
+        <article class="card bg-base-100 border border-base-300 overflow-hidden hover:shadow-xl transition-shadow">
+          {/* <figure class="aspect-5/3">
+            <img
+                  src={post.image}
+                  alt={post.title}
+                  loading="lazy"
+                  class="w-full h-full object-cover"
+                />
+          </figure> */}
+
+          <div class="card-body p-6">
+            <div class="flex items-center justify-between gap-2">
+              {/* <span class="badge badge-primary badge-outline">{post.category}</span> */}
+              <time class="text-xs text-base-content/50">{post.data.pubDate}</time>
+            </div>
+
+            <h3 class="card-title text-xl mt-2">{post.data.title}</h3>
+
+            {/* <p class="text-base-content/65 text-sm">
+                  {post.excerpt}
+                </p> */}
+
+            <div class="card-actions mt-4">
+              <a href="#newsletter" class="link link-primary font-semibold">
+                Read article →
+              </a>
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </main>
+</Base>

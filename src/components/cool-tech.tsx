@@ -1,10 +1,11 @@
 import { For } from "solid-js";
 import { Motion } from "solid-motionone";
-import { useLanguage } from "@/contexts/language";
 import type { IconTypes } from "solid-icons";
 import { SiTauri } from "solid-icons/si";
 import { FaSolidLock } from "solid-icons/fa";
 import { RiDocumentFilePaper2Fill } from "solid-icons/ri";
+import { $language, t } from "@/stores/language";
+import { useStore } from "@nanostores/solid";
 
 type Tech = {
   name: string;
@@ -35,10 +36,10 @@ const techs: Tech[] = [
 ];
 
 export function CoolTech() {
-  const { language, t } = useLanguage();
+  const language = useStore($language);
   return (
     <div class="max-w-4xl mx-auto mt-10 p-6">
-      <h1 class="text-3xl mb-6 text-center text-primary">💾 {t().tech.title}</h1>
+      <h1 class="text-3xl mb-6 text-center text-primary">💾 {t(language()).tech.title}</h1>
       <div class="grid gap-4  sm:grid-cols-2 lg:grid-cols-3 w-full max-w-4xl m-auto">
         <For each={techs}>
           {(tech) => (

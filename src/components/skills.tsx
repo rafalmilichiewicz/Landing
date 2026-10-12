@@ -1,6 +1,4 @@
 import { createMemo, createSignal, For } from "solid-js";
-import { useLanguage } from "@/contexts/language";
-
 import {
   SiHtml5,
   SiTypescript,
@@ -33,6 +31,8 @@ import type { IconTypes } from "solid-icons";
 import { FaSolidBroom } from "solid-icons/fa";
 import { RiDevelopmentCodeSSlashLine } from "solid-icons/ri";
 import { Motion } from "solid-motionone";
+import { t, $language } from "@/stores/language";
+import { useStore } from "@nanostores/solid";
 
 type Category = {
   title: { en: string; pl: string };
@@ -118,11 +118,11 @@ export function SkillsShowcase() {
   type CategoryKey = keyof typeof categories;
   const [active, setActive] = createSignal<CategoryKey>("web");
   const currentCategory = createMemo<Category>(() => categories[active()]);
-  const { language, t } = useLanguage();
+  const language = useStore($language);
 
   return (
     <div class="p-6 flex flex-col items-center transition-opacity duration-300">
-      <h2 class="text-3xl font-bold mb-6 text-primary">🛠️ {t().skills.title}</h2>
+      <h2 class="text-3xl font-bold mb-6 text-primary">🛠️ {t(language()).skills.title}</h2>
 
       <div role="tablist" class="tabs tabs-boxed mb-6">
         {Object.keys(categories).map((category) => (

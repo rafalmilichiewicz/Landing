@@ -10,7 +10,14 @@
   "compilerOptions": {
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
-    "types": ["bun"],
+    "types": [
+      "bun"
+    ],
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      },
+    ],
     "paths": {
       "@components/*": [
         "./src/components/*"

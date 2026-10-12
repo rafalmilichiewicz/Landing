@@ -1,5 +1,6 @@
+import { t, $language } from "@/stores/language";
+import { useStore } from "@nanostores/solid";
 import { For } from "solid-js";
-import { useLanguage } from "@/contexts/language";
 
 type Project = {
   name: string;
@@ -73,10 +74,10 @@ const projects: Project[] = [
 ];
 
 export function ProjectShowcase() {
-  const { language, t } = useLanguage();
+  const language = useStore($language);
   return (
     <div class="p-6">
-      <h1 class="text-3xl mb-6 text-center text-primary">🗂️ {t().showcase.title}</h1>
+      <h1 class="text-3xl mb-6 text-center text-primary">🗂️ {t(language()).showcase.title}</h1>
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <For each={projects}>
           {(project) => (
@@ -97,13 +98,13 @@ export function ProjectShowcase() {
                 <div class="card-actions justify-end">
                   {project.special !== undefined ? (
                     <a href={project.special} target="_blank" class="btn btn-warning">
-                      {t().showcase.special}
+                      {t(language()).showcase.special}
                     </a>
                   ) : (
                     <></>
                   )}
                   <a href={project.link} target="_blank" class="btn btn-info">
-                    {t().showcase.view}
+                    {t(language()).showcase.view}
                   </a>
                 </div>
               </div>
