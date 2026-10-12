@@ -10,7 +10,7 @@ import { SkillsShowcase } from "./skills";
 export function App() {
   return (
     <LanguageProvider>
-      <Navbar />
+      <Navbar languageSelector={true} />
 
       <div class="grow content-center">
         <Hero></Hero>

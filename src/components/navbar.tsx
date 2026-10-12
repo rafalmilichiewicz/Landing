@@ -3,7 +3,7 @@ import { FaBrandsLinkedin } from "solid-icons/fa";
 import { RiDevelopmentCodeSSlashLine } from "solid-icons/ri";
 import { useLanguage } from "@/contexts/language";
 
-export function Navbar() {
+export function Navbar(props: { languageSelector: boolean }) {
   const { setLanguage, t } = useLanguage();
 
   return (

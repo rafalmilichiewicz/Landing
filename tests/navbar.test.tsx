@@ -33,7 +33,7 @@ describe("Navbar", () => {
   });
 
   it("renders the navbar and language selector", () => {
-    render(() => <Navbar />);
+    render(() => <Navbar languageSelector={true} />);
 
     expect(screen.getByRole("img", { name: "Logo" })).toBeInTheDocument();
     expect(screen.getByRole(...language)).toBeInTheDocument();
@@ -43,14 +43,14 @@ describe("Navbar", () => {
   });
 
   it("renders the language options", () => {
-    render(() => <Navbar />);
+    render(() => <Navbar languageSelector={true} />);
 
     expect(screen.getByRole(...polish)).toBeInTheDocument();
     expect(screen.getByRole(...english)).toBeInTheDocument();
   });
 
   it("sets the language to Polish when Polski is clicked", () => {
-    render(() => <Navbar />);
+    render(() => <Navbar languageSelector={true} />);
 
     fireEvent.click(screen.getByRole(...polish));
 
@@ -59,7 +59,7 @@ describe("Navbar", () => {
   });
 
   it("sets the language to English when English is clicked", () => {
-    render(() => <Navbar />);
+    render(() => <Navbar languageSelector={true} />);
 
     fireEvent.click(screen.getByRole(...english));
 
@@ -68,7 +68,7 @@ describe("Navbar", () => {
   });
 
   it("blurs the active element after selecting Polish", () => {
-    render(() => <Navbar />);
+    render(() => <Navbar languageSelector={true} />);
 
     const blurSpy = vi.spyOn(HTMLElement.prototype, "blur");
 
@@ -80,7 +80,7 @@ describe("Navbar", () => {
   });
 
   it("blurs the active element after selecting English", () => {
-    render(() => <Navbar />);
+    render(() => <Navbar languageSelector={true} />);
 
     const blurSpy = vi.spyOn(HTMLElement.prototype, "blur");
 
