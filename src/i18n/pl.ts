@@ -3,6 +3,7 @@ import type { I18nStructure } from "@/i18n/index";
 export const PL: I18nStructure = {
     navbar: {
         language: "Język",
+        emoji: "🇵🇱",
     },
     hero: {
         description: "Programista zorientowany na dane",

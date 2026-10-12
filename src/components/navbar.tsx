@@ -14,36 +14,38 @@ export function Navbar() {
         </button>
       </div>
 
-      <div class="navbar-end ">
+      <div class="navbar-end">
         <div class="dropdown dropdown-end">
-          <div tabindex="0" role="button" class="btn m-1 btn-ghost text-neutral-content">
-            {t().navbar.language}
+          <div tabindex="0" role="button" class="btn m-1 btn-ghost text-neutral-content ">
+            {`${t().navbar.language} ${t().navbar.emoji}`}
           </div>
           <ul
             tabindex="-1"
             class="dropdown-content menu bg-neutral text-neutral-content rounded-box z-1 p-2 shadow-sm"
           >
             <li>
-              <a
+              <button
+                class="whitespace-nowrap"
                 onClick={() => {
                   setLanguage("pl");
                   //@ts-ignore
                   document.activeElement.blur();
                 }}
               >
-                Polski
-              </a>
+                Polski 🇵🇱
+              </button>
             </li>
             <li>
-              <a
+              <button
+                class="whitespace-nowrap"
                 onClick={() => {
                   setLanguage("en");
                   //@ts-ignore
                   document.activeElement.blur();
                 }}
               >
-                English
-              </a>
+                English 🇬🇧
+              </button>
             </li>
           </ul>
         </div>

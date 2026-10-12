@@ -8,6 +8,10 @@ vi.mock("@contexts/language", () => ({
 }));
 import { useLanguage } from "@contexts/language";
 
+const language = ["button", { name: /language/i }] as const;
+const polish = ["button", { name: /polski/i }] as const;
+const english = ["button", { name: /english/i }] as const;
+
 describe("Navbar", () => {
   const setLanguage = vi.fn();
   beforeEach(() => {
@@ -18,6 +22,7 @@ describe("Navbar", () => {
       t: () => ({
         navbar: {
           language: "Language",
+          emoji: "🇬🇧",
         },
       }),
     } as unknown as ReturnType<typeof useLanguage>);
@@ -31,23 +36,23 @@ describe("Navbar", () => {
     render(() => <Navbar />);
 
     expect(screen.getByRole("img", { name: "Logo" })).toBeInTheDocument();
-    expect(screen.getByText("Language")).toBeInTheDocument();
+    expect(screen.getByRole(...language)).toBeInTheDocument();
 
-    expect(screen.getByText("Polski")).toBeInTheDocument();
-    expect(screen.getByText("English")).toBeInTheDocument();
+    expect(screen.getByRole(...polish)).toBeInTheDocument();
+    expect(screen.getByRole(...english)).toBeInTheDocument();
   });
 
   it("renders the language options", () => {
     render(() => <Navbar />);
 
-    expect(screen.getByText("Polski")).toBeInTheDocument();
-    expect(screen.getByText("English")).toBeInTheDocument();
+    expect(screen.getByRole(...polish)).toBeInTheDocument();
+    expect(screen.getByRole(...english)).toBeInTheDocument();
   });
 
   it("sets the language to Polish when Polski is clicked", () => {
     render(() => <Navbar />);
 
-    fireEvent.click(screen.getByText("Polski"));
+    fireEvent.click(screen.getByRole(...polish));
 
     expect(setLanguage).toHaveBeenCalledTimes(1);
     expect(setLanguage).toHaveBeenCalledWith("pl");
@@ -56,7 +61,7 @@ describe("Navbar", () => {
   it("sets the language to English when English is clicked", () => {
     render(() => <Navbar />);
 
-    fireEvent.click(screen.getByText("English"));
+    fireEvent.click(screen.getByRole(...english));
 
     expect(setLanguage).toHaveBeenCalledTimes(1);
     expect(setLanguage).toHaveBeenCalledWith("en");
@@ -65,10 +70,9 @@ describe("Navbar", () => {
   it("blurs the active element after selecting Polish", () => {
     render(() => <Navbar />);
 
-    const polishOption = screen.getByText("Polski");
     const blurSpy = vi.spyOn(HTMLElement.prototype, "blur");
 
-    fireEvent.click(polishOption);
+    fireEvent.click(screen.getByRole(...polish));
 
     expect(blurSpy).toHaveBeenCalled();
 
@@ -80,7 +84,7 @@ describe("Navbar", () => {
 
     const blurSpy = vi.spyOn(HTMLElement.prototype, "blur");
 
-    fireEvent.click(screen.getByText("English"));
+    fireEvent.click(screen.getByRole(...polish));
 
     expect(blurSpy).toHaveBeenCalled();
 
