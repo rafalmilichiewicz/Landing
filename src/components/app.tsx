@@ -11,7 +11,7 @@ export function App() {
     <>
       <Hero></Hero>
       <Tea></Tea>
-      <Blog></Blog>
+      <Blog posts={[]} />
       <ProjectShowcase></ProjectShowcase>
       <SkillsShowcase></SkillsShowcase>
       <Journey></Journey>

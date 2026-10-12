@@ -6,6 +6,10 @@ export const EN = {
     hero: {
         description: "Data Oriented Programmer",
     },
+    blog: {
+        visit: "Visit",
+        read: "Read",
+    },
     showcase: {
         title: "Project Showcase",
         special: "Demo",

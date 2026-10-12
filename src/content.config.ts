@@ -1,4 +1,4 @@
-import { defineCollection } from "astro:content";
+import { type CollectionEntry, defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
 
@@ -8,7 +8,9 @@ const blog = defineCollection({
         title: z.string(),
         description: z.string(),
         pubDate: z.coerce.date(),
+        image: z.string(),
     }),
 });
 
 export const collections = { blog };
+export type Blog = CollectionEntry<"blog">;

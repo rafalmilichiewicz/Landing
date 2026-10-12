@@ -1,5 +1,6 @@
 ---
 import Base from "@/layouts/base.astro";
+import { EN } from "@i18n/en";
 import { getCollection } from "astro:content";
 
 const posts = (await getCollection("blog")).sort(
@@ -9,39 +10,27 @@ const posts = (await getCollection("blog")).sort(
 
 <Base title="Blog" description="Main Blog site">
   <main class="grow content-start">
-    <h1 class="text-3xl mb-6 text-center text-primary">🗂️ Blog</h1>
-    {
-      posts.map((post) => (
-        <article class="card bg-base-100 border border-base-300 overflow-hidden hover:shadow-xl transition-shadow">
-          {/* <figure class="aspect-5/3">
-            <img
-                  src={post.image}
-                  alt={post.title}
-                  loading="lazy"
-                  class="w-full h-full object-cover"
-                />
-          </figure> */}
-
-          <div class="card-body p-6">
-            <div class="flex items-center justify-between gap-2">
-              {/* <span class="badge badge-primary badge-outline">{post.category}</span> */}
-              <time class="text-xs text-base-content/50">{post.data.pubDate}</time>
-            </div>
-
-            <h3 class="card-title text-xl mt-2">{post.data.title}</h3>
-
-            {/* <p class="text-base-content/65 text-sm">
-                  {post.excerpt}
-                </p> */}
-
-            <div class="card-actions mt-4">
-              <a href="#newsletter" class="link link-primary font-semibold">
-                Read article →
-              </a>
+    <h1 class="text-3xl mb-6 text-center text-primary">✍🏻 Blog</h1>
+    <div class="grid md:grid-cols-2 gap-5 p-4 m-auto justify-center text-primary-content">
+      {
+        posts.map((post) => (
+          <div class="card card-sm  m-auto shadow-sm bg-secondary hover:bg-primary border-accent border-2">
+            <figure class="w-full md:h-96 overflow-hidden">
+              <img src={post.data.image} alt="Post cover" loading="lazy" />
+            </figure>
+            <div class="card-body ">
+              <h2 class="card-title text-xl font-bold">{post.data.title}</h2>
+              <p class="text-xs text-justify">{post.data.pubDate.toLocaleDateString()}</p>
+              <p class="text-base text-justify">{post.data.description}</p>
+              <div class="card-actions justify-around">
+                <a class="btn btn-info" href={`${post.collection}/${post.id}`}>
+                  {EN.blog.read}
+                </a>
+              </div>
             </div>
           </div>
-        </article>
-      ))
-    }
+        ))
+      }
+    </div>
   </main>
 </Base>

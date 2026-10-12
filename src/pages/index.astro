@@ -1,8 +1,27 @@
 ---
 import Base from "@/layouts/base.astro";
 import { App } from "@components/app";
+import { Blog } from "@components/blog";
+import { CoolTech } from "@components/cool-tech";
+import { Hero } from "@components/hero";
+import { Journey } from "@components/journey";
+import { ProjectShowcase } from "@components/showcase";
+import { SkillsShowcase } from "@components/skills";
+import { Tea } from "@components/tea";
+
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
 ---
 
 <Base title="Blog" description="Landing page of Rafał Milichiewicz">
-  <App client:only />
+  <Hero client:only />
+  <Tea />
+  <Blog posts={posts.slice(0, 2)} client:only />
+  <ProjectShowcase client:only />
+  <SkillsShowcase client:only />
+  <Journey client:only />
+  <CoolTech client:only />
 </Base>

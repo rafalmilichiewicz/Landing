@@ -8,6 +8,10 @@ export const PL: I18nStructure = {
     hero: {
         description: "Programista zorientowany na dane",
     },
+    blog: {
+        visit: "Odwiedź",
+        read: "Czytaj",
+    },
     showcase: {
         title: "Projekty",
         special: "Demo",
